@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Satish Khalid, a web developer
+    based in Nairobi, Kenya. Showcasing skills, projects, and contact
+    information."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Satish Khalid - Portfolio</title>
+  </head>
+  <style>
+    /* General Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #aba9e9;
+      color: #0f0f0f;
+      line-height: 1.6;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #438fd1;
+      color: #0c0908;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: #444;
+      color: #0e0404;
+      text-align: center;
+      padding: 0.7rem 0;
+      box-shadow: 0 2px 5px rgba(182, 20, 20, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #0c0c0c;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #a1948e;
+      border-radius: 4px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 2rem 5%; /* Padding on top/bottom and sides */
+      margin: 20px auto;
+      max-width: 900px; /* Max width for content */
+      background-color: #a89892;
+      box-shadow: 0 0 10px rgba(46, 11, 139, 0.1);
+      border-radius: 8px;
+    }
+
+    section h2 {
+      color: #0918eb; /* A nice blue for headings */
+      text-align: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #080808;
+      padding-bottom: 10px;
+    }
+
+    /* About Section Specifics */
+    .profile-img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #b3580e;
+    }
+
+    .about-content {
+      text-align: justify;
+    }
+
+    /* Skills Section Specifics */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(120px, 1fr)
+      ); /* Responsive grid */
+      gap: 15px;
+      text-align: center;
+    }
+
+    .skill-item {
+      background-color: #efeff1;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* Projects Section Specifics */
+    .project-item {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #070707;
+    }
+
+    .project-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .project-item h3 {
+      color: #ec0a02;
+      margin-bottom: 5px;
+    }
+
+    .project-item p {
+      margin-bottom: 10px;
+    }
+
+    .project-item a {
+      color: #cf5914;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Section Specifics */
+    .contact-info p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-info a {
+      color: #e70909;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: #6c757d;
+      color: #fff;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav ul li {
+        margin: 5px 10px;
+      }
+      section {
+        padding: 1.5rem 3%;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Satish Khalid</h1>
+      <p>Web Developer | Software Enthusiast | Problem Solver</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about" class="active">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <img src="/satish.jpeg" class="profile-img" />
+        <div class="about-content">
+          <p>
+            Hi,i'm a dedicated and creative develeoper with a passion for
+            building clean,responsive,interactive digital experiences.from
+            front-end design to functionality.i enjoy crafting projects that
+            blend modern aesthetics with user-friendly performances.i'm
+            constantly learning new tools and technologies to sharpen my skills
+            and bring fresh ideas to life.this portfolio showcases some of my
+            work,skills,and the journey i'm on as i grow in the tech world
+          </p>
+          <p>
+            My journey in the tech world has equipped me with a solid foundation
+            in front-end and a growing interest in back-end technologies. I
+            thrive on challenges, constantly seeking to learn new tools and
+            improve my craft. I'm particularly interested in building scalable
+            applications and contributing to impactful projects.
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new tech trends,
+            reading about software architecture, or enjoying the vibrant culture
+            of Nairobi.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">HTML5</div>
+          <div class="skill-item">CSS3</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">React.js</div>
+          <div class="skill-item">Python</div>
+          <div class="skill-item">Django/Flask</div>
+          <div class="skill-item">SQL (PostgreSQL)</div>
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">Responsive Design</div>
+          <div class="skill-item">Problem Solving</div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-item">
+          <h3>Project Title One: E-commerce Store</h3>
+          <p>
+            Developed a full-stack e-commerce platform using React for the
+            frontend and Django for the backend. Features include user
+            authentication, product catalog, shopping cart, and order
+            processing.
+          </p>
+          <p>
+            <strong>Technologies:</strong> React, Redux, Django REST Framework,
+            PostgreSQL, Stripe API
+          </p>
+          <p>
+            <a href="#/" target="_blank">View Project (Link Coming Soon)</a>
+          </p>
+        </div>
+
+        <div class="project-item">
+          <h3>Project Title Two: Task Management App</h3>
+          <p>
+            A simple web-based task manager with CRUD operations. Users can
+            create, read, update, and delete tasks, with data persistence
+            through a local storage API.
+          </p>
+          <p><strong>Technologies:</strong> HTML, CSS, Vanilla JavaScript</p>
+          <p>
+            <a href="#/" target="_blank">View Project (Link Coming Soon)</a>
+          </p>
+        </div>
+
+        <div class="project-item">
+          <h3>Project Title Three: Personal Blog</h3>
+          <p>
+            A minimalist blog platform built with Flask, allowing users to
+            publish and read articles. Includes markdown support and basic user
+            profiles.
+          </p>
+          <p><strong>Technologies:</strong> Flask, Jinja2, SQLite, Markdown</p>
+          <p>
+            <a href="#/" target="_blank">View Project (Link Coming Soon)</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+          <p>
+            I'm always open to new opportunities and collaborations. Feel free
+            to reach out!
+          </p>
+          <p>
+            Email:
+            <a href="mailto:your.email@example.com">satishkhalid@gmail.com</a>
+          </p>
+          <p>
+            whatsapp:
+            <a href="https://whatsapp.com/in/satishkhalid" target="_blank"
+              >0750148375</a
+            >
+          </p>
+          <p>
+            instagram:
+            <a href="https://instagram.com/satishkhalid" target="_blank"
+              >@http._sameer._</a
+            >
+          </p>
+          <p>Location: Nairobi, Kenya</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Satish Khalid. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
